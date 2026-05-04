@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi experiencia escolar puede mejorar la tuya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(180deg,#6a0dad,#a18cd1,#4facfe);
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+}
+
+/* LOGO */
+.logo{
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#e0c3fc;
+}
+
+/* MENÚ CENTRADO */
+.menu-top{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex:1;
+}
+
+.menu-top a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* BUSCADOR */
+.search-box{
+  display:flex;
+  gap:5px;
+}
+
+.search-box input{
+  padding:6px;
+  border-radius:10px;
+  border:none;
+}
+
+.search-box button{
+  padding:6px;
+  border:none;
+  border-radius:10px;
+  background:#4facfe;
+  color:white;
+  cursor:pointer;
+}
+
+/* CONTENIDO */
+.container{
+  padding:20px;
+  text-align:center;
+}
+
+h1{
+  font-family:'Playfair Display', serif;
+}
+
+p{
+  text-align:justify;
+}
+
+.card{
+  background: rgba(255,255,255,0.1);
+  padding:20px;
+  margin:20px 0;
+  border-radius:25px;
+}
+
+/* MEDIA */
+img, iframe{
+  width:100%;
+  max-width:400px;
+  border-radius:20px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR COMPLETA -->
+<div class="navbar">
+
+  <div class="logo">Abandono Escolar</div>
+
+  <!-- MENÚ CENTRADO -->
+  <div class="menu-top">
+    <a href="causas.html">¿POR QUÉ OCURRE?</a>
+    <a href="consecuencias.html">CONSECUENCIAS</a>
+    <a href="testimonios.html">TESTIMONIOS</a>
+    <a href="prevencion.html">PREVENCIÓN</a>
+    <a href="familia.html">FAMILIA</a>
+    <a href="recursos.html">RECURSOS</a>
+  </div>
+
+  <!-- BUSCADOR -->
+  <form class="search-box" action="https://www.google.com/search" method="GET">
+    <input type="text" name="q" placeholder="Buscar...">
+    <button type="submit">🔍</button>
+  </form>
+
+</div>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <h1>MI EXPERIENCIA ESCOLAR PUEDE MEJORAR LA TUYA</h1>
+
+  <!-- IMAGEN -->
+  <img src="CECY.png" alt="Plantel">
+
+  <div class="card">
+    <p>
+      El abandono escolar es una problemática que afecta a muchos estudiantes.
+      Comprender sus causas y actuar a tiempo puede cambiar el futuro.
+    </p>
+
+    <p>
+      Este proyecto busca generar conciencia y demostrar que sí existen soluciones
+      para evitar que más estudiantes abandonen sus estudios.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Reflexiona</h2>
+    <iframe height="220" src="https://www.youtube.com/embed/1fueZCTYkpA"></iframe>
+  </div>
+
+</div>
+
+</body>
+</html>
