@@ -132,14 +132,12 @@ p{
 
 <div class="container">
 
-<!-- BOTÓN MÚSICA -->
-<button onclick="playMusic()" class="btn-music">
+<!-- BOTÓN MÚSICA --> <button onclick="playMusic()" class="btn-music">
   🎧 Escapar del Upside Down
 </button>
-
-<audio id="musica" loop>
-  <source src="RUTH" type="audio/mpeg">
-</audio>
+  <audio id="musica" loop>
+    <source src="RUTH" type="audio/mpeg"> 
+  </audio>
 
 <h1>UPSIDE DOWN</h1>
 
@@ -187,6 +185,15 @@ solo necesitas no rendirte.
 <script>
 function playMusic(){
   document.getElementById("musica").play();
+}
+</script>
+  <script>
+function playMusic(){
+  const audio = document.getElementById("musica");
+
+  audio.play().catch(() => {
+    alert("Toca nuevamente el botón para activar el audio en tu celular");
+  });
 }
 </script>
 
