@@ -11,10 +11,8 @@
 body{
   margin:0;
   font-family:'Poppins', sans-serif;
-
   background: url("USD.gif") no-repeat center center fixed;
   background-size: cover;
-
   color:white;
 }
 
@@ -88,6 +86,16 @@ p{
   border-radius:15px;
 }
 
+/* DATO CURIOSO */
+.curious{
+  margin-top:20px;
+  padding:15px;
+  background: rgba(255,255,255,0.1);
+  border-left:4px solid #ff1e1e;
+  text-align:justify;
+  border-radius:10px;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 768px){
 
@@ -133,18 +141,19 @@ p{
 <div class="container">
 
 <!-- BOTÓN MÚSICA -->
-<button onclick="playMusic()" class="btn-music">
+<button class="btn-music" id="btnMusic">
   🎧 Escapar del Upside Down
 </button>
 
 <!-- AUDIO CORREGIDO -->
-<audio id="musica" loop>
-  <source src="RUTH" type="audio/mpeg">
+<audio id="musica" loop preload="auto">
+  <source src="RUTH.mp3" type="audio/mpeg">
 </audio>
 
 <h1>UPSIDE DOWN</h1>
 
 <div class="card">
+
 <p>
 A veces, el abandono escolar no se siente como una decisión…
 se siente como estar atrapado en el Upside Down.
@@ -178,6 +187,14 @@ No necesitas ser fuerte todo el tiempo…
 solo necesitas no rendirte.
 </p>
 
+<!-- DATO CURIOSO -->
+<div class="curious">
+<strong>Dato curioso:</strong>  
+El “Upside Down” es una dimensión paralela oscura y peligrosa donde los sentimientos negativos, el miedo y el caos dominan.  
+En la historia de Max, simboliza su estado emocional cuando se siente atrapada por el dolor y la tristeza.  
+Sin embargo, logra “escapar” gracias a la música, los recuerdos y el apoyo emocional de las personas que la quieren, recordándole que no está sola.
+</div>
+
 </div>
 
 <a href="index.html" class="btn-back">⬅ Volver al inicio</a>
@@ -185,15 +202,19 @@ solo necesitas no rendirte.
 </div>
 </div>
 
-<!-- SCRIPT CORREGIDO (UNA SOLA FUNCIÓN) -->
+<!-- JS CORREGIDO PARA CELULAR -->
 <script>
-function playMusic(){
-  const audio = document.getElementById("musica");
+const audio = document.getElementById("musica");
+const btn = document.getElementById("btnMusic");
 
-  audio.play().catch(() => {
-    alert("Toca nuevamente el botón para activar el audio en tu celular");
-  });
-}
+btn.addEventListener("click", async () => {
+  try {
+    audio.currentTime = 0;
+    await audio.play();
+  } catch (e) {
+    alert("En tu celular toca otra vez el botón para activar el audio");
+  }
+});
 </script>
 
 </body>
