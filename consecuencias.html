@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Consecuencias</title>
 
 <style>
@@ -27,24 +28,26 @@ body{
 /* texto justificado */
 p{
   text-align: justify;
-  line-height: 1.6;
+}
+
+/* listas */
+ul{
+  text-align:left;
 }
 
 /* imagen */
 img{
   width:300px;
+  max-width:100%;
   border-radius:20px;
   margin-top:15px;
 }
 
-/* caja de reflexión */
-.reflexion{
+/* video */
+iframe, video{
   margin-top:20px;
-  padding:20px;
   border-radius:20px;
-  background: rgba(255,255,255,0.2);
-  text-align: justify;
-  line-height: 1.6;
+  max-width:100%;
 }
 
 /* botón */
@@ -63,6 +66,33 @@ a:hover{
   transform:scale(1.05);
   background:rgba(255,255,255,0.5);
 }
+
+/* 📱 RESPONSIVE PARA CELULAR */
+@media (max-width: 768px){
+
+  h1{
+    font-size:22px;
+  }
+
+  .caja{
+    width:90%;
+    padding:15px;
+  }
+
+  img{
+    width:100%;
+  }
+
+  iframe, video{
+    width:100%;
+    height:200px;
+  }
+
+  ul{
+    padding-left:20px;
+  }
+
+}
 </style>
 
 </head>
@@ -74,11 +104,11 @@ a:hover{
 <div class="caja">
 
 <p>
-El abandono escolar tiene efectos negativos en la vida de las personas. Limita las oportunidades laborales y reduce la posibilidad de obtener un buen empleo.
+El abandono escolar tiene efectos negativos en la vida de las personas. Limita las oportunidades laborales y reduce la posibilidad de obtener un buen empleo, lo que afecta directamente la calidad de vida.
 </p>
 
 <p>
-También puede generar problemas económicos y afectar la estabilidad personal a largo plazo, ya que dificulta el acceso a estudios superiores o carreras profesionales.
+También puede generar problemas económicos y afectar la estabilidad personal a largo plazo, ya que dificulta el acceso a estudios superiores o carreras profesionales. Muchas personas que abandonan la escuela enfrentan trabajos mal pagados o inestables.
 </p>
 
 <p>
@@ -89,20 +119,29 @@ Además, influye en la autoestima, haciendo que la persona dude de sus capacidad
 En muchos casos, también puede llevar a la exclusión social, ya que se reducen las oportunidades de desarrollo personal y profesional.
 </p>
 
+<h3>CAUSAS DEL ABANDONO ESCOLAR</h3>
+
+<ul>
+  <li>Problemas económicos en el hogar</li>
+  <li>Falta de motivación o interés</li>
+  <li>Bullying o problemas sociales</li>
+  <li>Dificultades académicas</li>
+  <li>Falta de apoyo familiar</li>
+  <li>Necesidad de trabajar</li>
+</ul>
+
 <img src="im1.jpg" alt="Consecuencias">
 
-<div class="reflexion">
+<br>
+
 <h3>REFLEXIÓN</h3>
 
-<p>
-El abandono escolar no solo afecta el presente de una persona, sino también su futuro. La educación es una herramienta fundamental para construir oportunidades, desarrollar habilidades y mejorar la calidad de vida. Abandonar la escuela puede parecer una solución momentánea a problemas personales o económicos, pero a largo plazo limita el crecimiento y las posibilidades de alcanzar metas importantes.
-</p>
-
-<p>
-Por ello, es importante reflexionar sobre el valor de la educación y el apoyo que deben recibir los estudiantes para evitar que abandonen sus estudios. La escuela no solo forma conocimientos, también ayuda a formar personas con más oportunidades y un mejor futuro.
-</p>
-</div>
-
+<iframe 
+src="https://drive.google.com/file/d/1WtPAkKfn9p2FF5PxG9MsN1si1O1YJG0v/preview"
+width="400"
+height="250"
+allow="autoplay">
+</iframe>
 <br>
 
 <a href="index.html">Volver al inicio</a>
