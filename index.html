@@ -34,7 +34,7 @@ body{
   color:#e0c3fc;
 }
 
-/* MENÚ CENTRADO */
+/* MENÚ */
 .menu-top{
   display:flex;
   gap:25px;
@@ -46,6 +46,13 @@ body{
   color:white;
   text-decoration:none;
   font-size:14px;
+}
+
+/* BOTÓN CELULAR */
+.menu-btn{
+  display:none;
+  font-size:25px;
+  cursor:pointer;
 }
 
 /* BUSCADOR */
@@ -67,6 +74,28 @@ body{
   background:#4facfe;
   color:white;
   cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .menu-top{
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#6a0dad;
+    flex-direction:column;
+    padding:10px;
+  }
+
+  .menu-top.show{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
 }
 
 /* CONTENIDO */
@@ -102,13 +131,14 @@ img, iframe{
 
 <body>
 
-<!-- NAVBAR COMPLETA -->
+<!-- NAVBAR -->
 <div class="navbar">
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
   <div class="logo">Abandono Escolar</div>
 
-  <!-- MENÚ CENTRADO -->
-  <div class="menu-top">
+  <div class="menu-top" id="menu">
     <a href="causas.html">¿POR QUÉ OCURRE?</a>
     <a href="consecuencias.html">CONSECUENCIAS</a>
     <a href="testimonios.html">TESTIMONIOS</a>
@@ -117,7 +147,6 @@ img, iframe{
     <a href="recursos.html">RECURSOS</a>
   </div>
 
-  <!-- BUSCADOR -->
   <form class="search-box" action="https://www.google.com/search" method="GET">
     <input type="text" name="q" placeholder="Buscar...">
     <button type="submit">🔍</button>
@@ -130,7 +159,6 @@ img, iframe{
 
   <h1>MI EXPERIENCIA ESCOLAR PUEDE MEJORAR LA TUYA</h1>
 
-  <!-- IMAGEN -->
   <img src="CECY.png" alt="Plantel">
 
   <div class="card">
@@ -147,10 +175,20 @@ img, iframe{
 
   <div class="card">
     <h2>Reflexiona</h2>
-    <iframe height="220" src="https://www.youtube.com/embed/1fueZCTYkpA"></iframe>
+
+    <!-- VIDEO CAMBIADO -->
+    <iframe height="220" src="https://www.youtube.com/embed/9u3p9Q2nH9c"></iframe>
+
   </div>
 
 </div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
