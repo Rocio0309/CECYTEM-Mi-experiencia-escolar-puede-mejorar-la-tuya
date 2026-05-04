@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upside Down</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+
+  /* 👇 CAMBIA AQUÍ TU GIF DE FONDO */
+  background: url("USD.gif") no-repeat center center fixed;
+  background-size: cover;
+
+  color:white;
+}
+
+/* CAPA OSCURA */
+.overlay{
+  background: rgba(0,0,0,0.6);
+  min-height:100vh;
+}
+
+/* CONTENIDO */
+.container{
+  padding:20px;
+  text-align:center;
+}
+
+/* BOTÓN VOLVER */
+.btn-back{
+  background:black;
+  color:white;
+  border:2px solid white;
+  padding:8px 15px;
+  border-radius:15px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* BOTÓN MÚSICA */
+.btn-music{
+  background:black;
+  color:#ff1e1e;
+  border:2px solid #ff1e1e;
+  padding:12px 20px;
+  border-radius:20px;
+  cursor:pointer;
+  box-shadow:0 0 15px red;
+  transition:0.3s;
+}
+
+.btn-music:hover{
+  background:#ff1e1e;
+  color:black;
+}
+
+/* TÍTULO */
+h1{
+  font-family:'Playfair Display';
+  color:#ff1e1e;
+  text-shadow:0 0 20px red;
+}
+
+/* TARJETA */
+.card{
+  background: rgba(0,0,0,0.7);
+  padding:20px;
+  margin:20px auto;
+  border-radius:20px;
+  max-width:500px;
+}
+
+/* TEXTO */
+p{
+  text-align:justify;
+}
+
+/* GIF */
+.gif{
+  width:200px;
+  margin-top:15px;
+  border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<!-- BOTÓN MÚSICA -->
+<button onclick="playMusic()" class="btn-music">
+  🎧 Escapar del Upside Down
+</button>
+
+<audio id="musica" loop>
+  <source src="max.mp3" type="audio/mpeg">
+</audio>
+
+<h1>UPSIDE DOWN</h1>
+
+<div class="card">
+<p>
+A veces, el abandono escolar no se siente como una decisión…
+se siente como estar atrapado en el Upside Down.
+</p>
+
+<p>
+Hay pensamientos, problemas y situaciones que te envuelven,
+como raíces invisibles que te detienen poco a poco.
+</p>
+
+<p>
+Pero siempre hay algo que puede salvarte:
+una meta, una persona, un sueño.
+</p>
+
+<p>
+Aunque todo parezca oscuro… siempre hay una salida.
+</p>
+
+<!-- 👇 TU GIF -->
+<img class="gif" src="MAX1.gif">
+
+<!-- 👇 REFLEXIÓN DE MAX -->
+<p>
+Como Max, a veces sientes que todo te jala hacia abajo,
+como si no pudieras escapar de lo que sientes.
+Pero incluso en ese momento, hay algo que puede salvarte:
+una canción, un recuerdo, alguien que te quiere.
+</p>
+
+<p>
+No necesitas ser fuerte todo el tiempo…
+solo necesitas no rendirte.
+</p>
+
+</div>
+
+<!-- 🔙 BOTÓN AL FINAL -->
+<a href="index.html" class="btn-back">⬅ Volver al inicio</a>
+
+</div>
+</div>
+
+<script>
+function playMusic(){
+  document.getElementById("musica").play();
+}
+</script>
+
+</body>
+</html>
