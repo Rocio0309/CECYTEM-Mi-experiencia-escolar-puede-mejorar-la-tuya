@@ -132,12 +132,15 @@ p{
 
 <div class="container">
 
-<!-- BOTÓN MÚSICA --> <button onclick="playMusic()" class="btn-music">
+<!-- BOTÓN MÚSICA -->
+<button onclick="playMusic()" class="btn-music">
   🎧 Escapar del Upside Down
 </button>
-  <audio id="musica" loop>
-    <source src="RUTH" type="audio/mpeg"> 
-  </audio>
+
+<!-- AUDIO CORREGIDO -->
+<audio id="musica" loop>
+  <source src="RUTH" type="audio/mpeg">
+</audio>
 
 <h1>UPSIDE DOWN</h1>
 
@@ -182,12 +185,8 @@ solo necesitas no rendirte.
 </div>
 </div>
 
+<!-- SCRIPT CORREGIDO (UNA SOLA FUNCIÓN) -->
 <script>
-function playMusic(){
-  document.getElementById("musica").play();
-}
-</script>
-  <script>
 function playMusic(){
   const audio = document.getElementById("musica");
 
